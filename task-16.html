@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title> Task-16 </title>
+		<style>
+		label{
+		:10px;
+		}
+		</style>
+	</head>
+	<body>
+	<h1>Calculating Result in JavaScript</h1>
+	     <div class="parent">
+       <form id="forms">
+           <label for="amount">enter the amount:</label><br>
+           <input type="text" name="amount" id="amount"><br><br>
+           <label for="tips">enter the tipss:</label><br>
+           <input type="text" name="tips" id="tips"><br><br>
+           <label for="result">result:</label><br>
+           <input type="text"name="result" id="result"><br>
+           <button>click</button>
+           <div id="thanks"></div>
+
+       </form> 	  
+		<script>
+		let form = document.getElementById("forms");
+        form.addEventListener("submit",function(e){
+    e.preventDefault();
+
+
+    let amount =parseInt(document.getElementById('amount').value);
+    let tips=parseInt(document.getElementById('tips').value);
+    let total=document.getElementById('result');
+    let tanks=document.getElementById("thanks");
+
+    if((amount==="")||(amount<0)|| isNaN(amount)){
+     thanks.innerHMTL="pls enter amount";
+    }
+    else if((tips==="")||(tips<0)||isNaN(tips)){
+        thanks.innerHMTL="pls enter the tips";
+
+    }
+    else{
+        let tip=amount*(tips/100);
+        let results=tip+amount;
+        total.value=`${results}`;
+    }
+});
+		</script>
+    </body>
+	</html>
+ 
